@@ -284,7 +284,6 @@
       .then(response => response.json())
       .then(token => {
         if (token.access_token) {
-          // Store the token safely in local storage
           localStorage.setItem('access_token', token.access_token);
           window.location.replace('/index.html')
         } else {
