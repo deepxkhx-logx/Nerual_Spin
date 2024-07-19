@@ -1,0 +1,16 @@
+--Requirement.txt--
+
+Backend : 
+Flask
+Flask-Restful
+Flask- SQLAlchemy
+Python-Dotenve
+Tensor-Flow
+Google-Generative AI
+keras_cv
+
+front-end
+Html
+CSS
+Java Script
+bootstrap v5 - Modal
