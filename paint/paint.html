@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>painting app</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="images/fevicon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="top_nav">
+        <div class="element">
+          <div class="file_menu">
+            <div class="top_tools">
+              <div class="lable startFunction" id="save">
+                <img title="save" src="images/save.png" alt="save painting" />
+                <small>save</small>
+              </div>
+              <div class="lable startFunction" id="clear">
+                <img title="clean" src="images/clear.png" alt="clear all" />
+                <small>clear</small>
+              </div>
+            </div>
+            <span>file</span>
+          </div>
+        </div>
+        <div class="element">
+            <div class="file_menu">
+              <div class="top_tools">
+                <div class="lable tool" id="rectangle">
+                  <img
+                    title="rectangle"
+                    src="images/rectangle.png"
+                    alt="rectangle"
+                  />
+                  <small>rectangle</small>
+                </div>
+                <div class="lable tool" id="circle">
+                    <img title="circle" src="images/circle.png" alt="circle" />
+                  <small>circle</small>
+                </div>
+                <div class="lable tool" id="triangle">
+                    <img title="triangle" src="images/triangle.png" alt="triangle" />
+                  <small>triangle</small>
+                </div>
+  
+              </div>
+              <span>shaps</span>
+            </div>
+          </div>
+          <div class="check_room">
+            <input type="checkbox" name="" id="colorCheck">
+            <label for="colorCheck">fill color</label>
+          </div>
+        <div class="element">
+          <div class="file_menu">
+            <div class="top_tools">
+              <div class="lable tool active_tool" id="brush">
+                <img title="brush" src="images/brush.png" alt="brush" />
+                <small>brush</small>
+              </div>
+              <div class="lable tool" id="eraser">
+                <img title="eraser" src="images/rubber.png" alt="eraser" />
+                <small>Eraser</small>
+              </div>
+            </div>
+            <input type="range" name="" min="1" max="30" id="slider" value="5"/>
+            <span>tools</span>
+          </div>
+        </div>
+        <div class="element">
+          <div class="file_menu">
+            <div class="top_tools">
+                <ul class="ul_color_list">
+                    <li class="option selected_color"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <li class="option"></li>
+                    <li class="option" >
+                        <input type="color" name="" id="color_picker" value="#4A98F7">
+                    </li>
+                  </ul>
+            </div>
+            <span>colors</span>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="draw_area">
+        <canvas></canvas>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

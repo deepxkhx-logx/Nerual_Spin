@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neural SpinImage Editor Login</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Open Sans", sans-serif;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      width: 100%;
+      
+      background: url("bgforappright.jpg") #000;
+      filter: brightness(80%);
+      padding: 0 10px;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    
+      background: url("bgforappright.jpg"), #000;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .wrapper {
+      width: 400px;
+      border-radius: 8px;
+      padding: 30px;
+      text-align: center;
+      border: 3px solid rgb(0, 255, 183);
+     
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(3px);
+      background-color: #00000038;
+    }
+
+    .logo {
+      position: relative;
+      width: 120px;
+      align-self: center;
+    }
+
+    .logo img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .logo-name {
+      position: absolute;
+      top: 50%;
+      left: 100%; 
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: left 0.3s ease, opacity 0.3s ease; 
+    }
+
+    .logo:hover img {
+      transform: translateX(-60px); 
+    }
+
+    .logo:hover .logo-name {
+      left: calc(100% + 5px);
+      opacity: 1;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #00eaff;
+    }
+
+    h2::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            display: block;
+            margin-top: 8px;
+            left: 50%;
+            transform: translateX(-50%); 
+            background: #fd008f;
+            transition: width 0.3s ease, left 0.3s ease;
+        }
+
+        h2:hover::after {
+            width: 40%;
+            right: 0;
+        }
+
+    .input-field {
+      position: relative;
+      border-bottom: 2px solid #fbff00;
+      margin: 15px 0;
+    }
+
+    .input-field label {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      color: #50fbb6;
+      font-size: 16px;
+      pointer-events: none;
+      transition: 0.15s ease;
+    }
+
+    .input-field input {
+      width: 100%;
+      height: 40px;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      color: #ffffff;
+    }
+
+    .input-field input:focus~label,
+    .input-field input:valid~label {
+      font-size: 0.8rem;
+      top: 10px;
+      transform: translateY(-120%);
+    }
+
+    .forget {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 25px 0 35px 0;
+      color: #fff;
+      font-weight: 500;
+      
+    }
+
+    #remember {
+      accent-color: #036348;
+    }
+
+    .forget label {
+      display: flex;
+      align-items: center;
+    }
+
+    .forget label p {
+      margin-left: 8px;
+    }
+
+    .wrapper a {
+      color: #efefef;
+      text-decoration: none;
+    }
+
+    .wrapper a:hover {
+      text-decoration: underline;
+    }
+
+    button {
+      background: #03155a;
+      color:#50fbb6;
+      font-weight: 600;
+     
+      padding: 12px 20px;
+      cursor: pointer;
+      border-radius: 3px;
+      font-size: 16px;
+      border: 2px solid #50fbb6;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      color: #f2ff00;
+      border-color: yellow;
+      background: rgba(8, 141, 101, 0.588);
+    }
+
+   .register {
+      text-align: center;
+      margin-top: 30px;
+      color: #fff;
+    }
+
+   .animated-tools {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+   .animated-tools img {
+      width: 20px;
+      height: auto;
+      animation: move 3s ease-in-out infinite;
+    }
+
+    @keyframes move {
+      0% {
+        transform: translateX(0);
+      }
+      200% {
+        transform: translateX(-100%);
+      }
+    }
+
+    .social-login {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.social-login a {
+  margin: 15px;
+}
+
+.social-login img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+  <form>
+    <h2>Login</h2>
+    <div class="input-field">
+      <input type="text" id="email" required>
+      <label>Enter your email</label>
+    </div>
+    <div class="input-field">
+      <input type="password" id="password" required>
+      <label>Enter your password</label>
+    </div>
+    <div class="forget">
+      <label for="remember">
+        <input type="checkbox" id="remember">
+        <p>Remember me</p>
+      </label>
+      <a href="#">Forgot password?</a>
+    </div>
+    <button type="submit" id="login-btn">Sign In</button>
+    <div class="register">
+      <p>Don't have an account? <a href="#">Sign Up</a></p>
+    </div>
+  </form>
+</div>
+    </form>
+  </div>
+  <script>
+  const loginBtn = document.getElementById('login-btn');
+  loginBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const opts = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ email, password })
+    };
+    fetch('http://localhost:5000/login', opts)
+      .then(response => response.json())
+      .then(token => {
+        if (token.access_token) {
+          // Store the token safely in local storage
+          localStorage.setItem('access_token', token.access_token);
+          window.location.replace('/index.html')
+        } else {
+          console.log("Please type in correct username/password");
+        }
+      })
+      .catch(error => console.error('Error:', error));
+  });
+</script>
+</body>
+</html>

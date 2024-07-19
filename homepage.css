@@ -1,0 +1,220 @@
+
+        header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #321061;
+      padding: 10px 20px;
+      position: sticky;
+    
+    }
+
+
+    header nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      position: sticky;
+    }
+
+    header .login-button {
+      display: flex;
+      align-items: center;
+      padding-left: 30px;
+      gap: 20px;
+      position: sticky;
+    }
+
+
+.login {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px;
+}
+
+.login  button {
+    --c: rgb(240, 200, 19);
+    color: var(--c);
+    font-size: 16px;
+    border: 3px solid var(--c);
+    border-radius: 0.5em;
+    width: 6em;
+    height: 3em;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: verdana;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 2em;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    transition: 0.5s;
+    background-color: #9422ff;
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.login  button span {
+    position: absolute;
+    width: 35%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+
+.login button:hover {
+    color: rgb(133, 4, 255);
+}
+
+.login  button:hover span {
+    transform: translateY(0) scale(2);
+}
+
+.login  button span:nth-child(1) {
+    --n: 1;
+}
+
+.login  button span:nth-child(2) {
+    --n: 2;
+}
+
+.login  button span:nth-child(3) {
+    --n: 3;
+}
+
+.login  button span:nth-child(4) {
+    --n: 4;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+
+.main {
+background: linear-gradient(-135deg, #380a79,#0a0512);
+text-align: left;
+padding: 50px 20px;
+display: flex;
+height: 634px;
+background-attachment: fixed;
+
+}
+
+.main2 {
+  background-color: #570dcf;
+  padding: 50px 20px;
+  height: 670px;
+  text-align: center;
+
+}
+
+.main3 {
+  background-color: #270e96;
+  padding: 50px 20px;
+  height: 634px;
+  text-align: center;
+
+}
+
+
+
+.hero {
+  max-width: 50%;
+  margin: 0;
+  position: relative;
+  padding-left: 320px;
+  padding-top: 100px;
+}
+
+.hero h1 {
+  font-size: 3.1em;
+  font-family: monospace;
+  color: transparent;
+  margin: 0;
+  text-shadow: 0 0 0.11em #8000ff72;
+  background: linear-gradient(
+to right,
+#cc00ff 20%,
+#881ae8 40%,
+#450cff 60%,
+#8e06fc 80%,
+#f308ff 100%
+
+
+);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+
+background-size: 500% auto;
+animation: textShine 5s ease-in-out infinite alternate;
+
+}
+@keyframes textShine {
+0% {
+background-position: 0% 50%;
+}
+100% {
+background-position: 100% 50%;
+}
+
+
+}
+
+.hero p {
+  font-size: 1.4em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #c3a9ff;
+}
+
+
+
+
+.team img {
+padding: 20px;
+width: 120px;
+transition: transform .3s ease-in-out;
+transition: width 0.3s ease;
+
+}
+
+.neural figure img {
+-webkit-transform: rotate(0) scale(1);
+transform: rotate(0) scale(1);
+-webkit-transition: .3s ease-in-out;
+transition: .3s ease-in-out;
+}
+
+.neural figure:hover img {
+
+-webkit-transform: rotate(30deg) scale(1.4);
+transform: rotate(30deg) scale(1.4);
+}
+
+
+.-image {
+  transition: transform .7s ease-in-out;
+  transition: width 0.5s ease;
+  position: relative;
+  padding-left: 100px;
+  padding-top: 50px;
+  padding-right: 200px;
+  
+}
+
+
+
+.neural-image img {
+  width: 400px;
+}
+
+

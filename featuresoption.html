@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Spin - Digital Image Editing App</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #212121;
+        }
+        
+        .header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid #2980b9;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .feature {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .feature:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        }
+        
+        .feature h2 {
+            margin-top: 0;
+            font-size: 18px;
+            color: #333;
+        }
+        
+        .feature p {
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .feature button {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        
+        .feature button:hover {
+            background-color: #2980b9;
+        }
+        
+        .create-new-project {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .create-new-project input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            width: 100%;
+        }
+        
+        .create-new-project button[type="submit"] {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        
+        .create-new-project button[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+        
+        .introduction {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .introduction h2 {
+            margin-top: 0;
+            font-size: 24px;
+            color: #333;
+        }
+        
+        .introduction p {
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Neural Spin - Digital Image Editing App</h1>
+    </header>
+    <main class="main-content">
+        <div class="introduction">
+            <h2>Welcome to Features Page</h2>
+            <p>Neural Spin also allows you to choose various options in which each option has a unique feature</p>
+        </div>
+        <div class="feature">
+            <h2>Edit Image</h2>
+            <p>Edit Your Image Here</p>
+            <a href="image_editor/index.html"><button type="submit">Edit Image</button></a>
+          
+        </div>
+        <div class="feature">
+            <h2>Video To Audio Converter</h2>
+            <p>You can Convert An video file to Audio file</p>
+            <a href="videotoaudio-main/video-audio.html"><button>Mp4-Mp3</button></a>
+        </div>
+        <div class="feature">
+            <h2>Image Resizer</h2>
+            <p>You Can resize your images here</p>
+            <a href="image_resizer/image-resizer.html"><button>Resize</button></a>
+        </div>
+		        </div>
+        <div class="feature">
+            <h2>Paint</h2>
+            <p>You Can paint what ever you want</p>
+            <a href="paint/paint.html"><button>paint it</button></a>
+        </div>
+		<div class="feature">
+            <h2>Generate Story</h2>
+            <p>Using AI you can Generate story</p>
+            <a href="story_genai/gen_story_ai.html"><button>GenerateStory</button></a>
+        </div>
+    </main>
+    
+    <script>
+        document.querySelectorAll('.feature button').forEach(button => {
+            button.addEventListener('click', () => {
+                console.log('Button clicked!');
+            });
+        });
+        
+        document.querySelector('.create-new-project').addEventListener('submit', event => {
+            event.preventDefault();
+            const projectName = document.querySelector('#project-name').value;
+            console.log(`Create new project: ${projectName}`);
+            window.location.href = 'new-project.html';
+        });
+    </script>
+</body>
+</html>

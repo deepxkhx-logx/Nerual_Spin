@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>image Resizer APP-JS</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="box">
+      <div class="uploader">
+        <input type="file" id="file" hidden />
+        <img
+          src="./cloud_upload_FILL0_wght400_GRAD0_opsz48.svg"
+          alt="upload icon"
+        />
+        <label for="file">Browse File To Upload</label>
+      </div>
+      <div class="tools">
+        <div class="w_h">
+          <div class="_input">
+            <label for="width">Width</label>
+            <input type="number" name="" id="width">
+          </div>  
+          <div class="_input">
+            <label for="height">height</label>
+            <input type="number" name="" id="height">
+          </div>  
+        </div>
+        <div class="checked_tools">
+            <div class="_ratio">
+                <input type="checkbox" name="" id="aspect">
+                <label for="aspect">Lock Aspect Ratio</label>
+            </div>
+            <hr>
+            <div class="_ratio">
+                <input type="checkbox" name="" id="reduce">
+                <label for="reduce">Reduce Quality</label>
+            </div>
+        </div>
+        
+        <button class="downloadBtn">download image</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

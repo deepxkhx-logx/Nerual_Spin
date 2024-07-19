@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Showcase</title>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="card">
+            <img src="painter.jpg" alt="Painter">
+            <div class="card-content">
+                <h2>Painter</h2>
+                <p>A powerful tool for digital art creation.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="editz.jpg" alt="Editz">
+            <div class="card-content">
+                <h2>Editz</h2>
+                <p>Edit photos with ease using our intuitive software.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="viduio.jpg" alt="Viduio">
+            <div class="card-content">
+                <h2>Viduio</h2>
+                <p>Create stunning videos with professional tools.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="storyteller.jpg" alt="StoryTeller">
+            <div class="card-content">
+                <h2>StoryTeller</h2>
+                <p>Craft engaging stories with our storytelling platform.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+/* Grid container styles */
+.grid-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+/* Card styles */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-content p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.card-content .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.card-content .btn:hover {
+    background-color: #0056b3;
+}
+
+@media only screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 10px;
+    }
+    .card {
+        /* Adjust card styles for smaller screens */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    .card {
+        /* Further adjustments for smaller screens */
+    }
+}
+
+    </style>
+</body>
+</html>
